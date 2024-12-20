@@ -2,7 +2,7 @@ import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 import torch
 
-GPU_IDX = 0
+GPU_IDX = 0        # GPU ID for single GPU computing or the main GPU for DP mode
 DEVICE = torch.device('cpu')
 if torch.cuda.is_available():
     DEVICE = torch.device(f"cuda:{GPU_IDX}")

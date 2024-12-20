@@ -61,7 +61,7 @@ flags.DEFINE_integer('N_steps_seq', 100, '#training steps for subsequent scenes 
 flags.DEFINE_float('lrate', 5e-4, 'Learn rate.')
 flags.DEFINE_integer('lrate_decay', 250, 'Exponential learning rate decay (in 1000 steps).')
 flags.DEFINE_integer('block_size', 129, 'Block Size trained one time. Should be an odd number.')
-flags.DEFINE_integer('N_rand',32*32*4, '# random points per gradient step(only used in sequential training)')
+# flags.DEFINE_integer('N_rand',32*32*4, '# random points per gradient step(only used in sequential training)')
 
 
 flags.DEFINE_boolean('add_ssim_loss', False, 'Add ssim loss or not.')
@@ -77,7 +77,7 @@ flags.DEFINE_list('render_t_range', None, 'Time range of rendered 3D videos, sho
 flags.DEFINE_list('ROI_Box', None, 'ROI box of rendered scene, should be in format [x,y,z,w,h,d].')
 flags.DEFINE_boolean('retain_gray', False, 'Keep rendered 3D videos grayscale.')
 
-flags.DEFINE_string('Hdir', None, 'H_mtx path for rendering projections. Omit when render_proj is set to False. None for reproducing training inputs.')
+# flags.DEFINE_string('Hdir', None, 'H_mtx path for rendering projections. Omit when render_proj is set to False. None for reproducing training inputs.')
 # finetuning options
 # flags.DEFINE_integer('N_steps_ft', 2000, '#finetuning steps for each scene.')
 # flags.DEFINE_float('lrate_ft', 0.004, 'Learn rate for finetuning.')

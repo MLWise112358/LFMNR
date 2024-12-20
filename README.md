@@ -70,12 +70,18 @@ To use this, run the following commend inside a [conda](https://docs.conda.io/en
 ```
 
 ## Get Started 
-#### Training and test data preparation: ####
-***Note***:
+
+### Training and test data preparation:
 We provide example data for network training and testing. Please download from [Google Drive](https://drive.google.com/drive/folders/1mcP4AzC2waJfwcpjPuQ1vObnjq_mm9aq?usp=sharing). 
 When the file has been downloaded, please extract the packaged data into './code/data' (refer to [Overview of repository](#overview-of-repository))
 
+
+
 ### Commands for Training
+***Note***: Users can specify the GPU device for network training or inference in *'glbSettings.py'*.
+* For single GPU computation, set *'GPU_IDX'* in *'glbSettings.py'*.
+* For multi-GPU computation, set the "action" parameter in the '.cfg' file to "TRAIN-DP" and specify the "GPU_IDX_list" in *'glbSettings.py'*. 
+*'GPU_IDX_list'* must include *'GPU_IDX'* (*e.g.* *GPU_IDX=0; GPU_IDX_list=[0,1]*)
 
 #### Example 1: Single scene training
 This command was used to represent one scene (mitochondria, here) with LFINR. The network parameters and corresponding data directory have been included in the config file ('*LF_mito_scene1.cfg*'). 
